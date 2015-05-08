@@ -4,11 +4,26 @@
 @import "bootstrap";
 
 .banner {
-  height: 155px;
-  width: 1200px;
+  margin-top: -15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   border-bottom: dotted #222222;
 }
+
+.post-style {
+  text-align: center;
+}
+
+.titles {
+  font-size: 1.75em;
+  font-family: Optima;
+  text-decoration: underline;
+}
+
+.body {
+  font-size: 1.25em;
+  font-family: Optima;
+}
+
 

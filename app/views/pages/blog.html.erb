@@ -1,7 +1,13 @@
-<div class="col-md-12">
+<div class="col-md-2"></div>
+
+
+<div class="col-md-8">
+  <div class="post-style">
   <% @posts.each do |p| %>
-    <%= p.title %>
+    <h1 class="titles"><%= p.title %></h1></br>
+    <p class="body"><%= p.body %></p></br>
   <% end %>
-
-
+  </div>
 </div>
+
+<div class="col-md-2"></div>
