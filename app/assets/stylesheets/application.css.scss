@@ -1,20 +1,14 @@
+//= require_tree .
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 .banner {
-  height: 130;
-  width: 1100;
+  height: 155px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  border-bottom: dotted #222222;
 }
 
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-}
-
-.navbar .navbar-collapse {
-    text-align: center;
-}

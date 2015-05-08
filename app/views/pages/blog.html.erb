@@ -1,2 +1,7 @@
-<h1>Pages#blog</h1>
-<p>Find me in app/views/pages/blog.html.erb</p>
+<div class="col-md-12">
+  <% @posts.each do |p| %>
+    <%= p.title %>
+  <% end %>
+
+
+</div>

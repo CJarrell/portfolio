@@ -1,23 +1,23 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Portfolio</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <!-- Logo -->
-  <div class="banner">
-    <%= image_tag("TTT-logo-v2.png", :size => "1000x125") %>
-  </div>
+  <head>
+    <title>Portfolio</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!-- Render navbar partial -->
+    <%= render 'shared/navbar' %>
 
-  <!-- Render navbar partial -->
-  <%= render 'shared/navbar' %>
+    <!-- Logo -->
+    <div class="banner">
+      <%= image_tag("TTT-logo-v2.png", :size => "1000x125") %>
+    </div>
 
-  <!-- Render content page -->
-  <%= yield %>
+    <!-- Render content page -->
+    <%= yield %>
 
-</body>
+  </body>
 </html>
