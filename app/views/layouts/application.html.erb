@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- Logo -->
+  <div class="banner">
+    <%= image_tag("TTT-logo-v2.png", :size => "1000x125") %>
+  </div>
 
-<%= yield %>
+  <!-- Render navbar partial -->
+  <%= render 'shared/navbar' %>
+
+  <!-- Render content page -->
+  <%= yield %>
 
 </body>
 </html>
