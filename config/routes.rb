@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'admin/new-post'
-
-  get 'admin/new-file'
-
+  devise_for :admins
   root 'pages#home'
 
   get "gallery" => "pages#gallery", as: :gallery

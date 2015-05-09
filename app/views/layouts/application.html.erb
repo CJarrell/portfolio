@@ -17,11 +17,28 @@
     </div>
 
     <!-- Render content page -->
-    <%= yield %>
+    <div>
+      <%= yield %>
+    </div>
+
+    <!-- devise alerts -->
+    <div class="post-style">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
     <!-- Admin Login Nav -->
-    <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Sign in</button>
+    <div class="row admin">
+      <div class="col-xs-4"></div>
+
+      <div class="col-xs-12">
+        <ul class="admin-nav">      
+          <li><p><a href="#">Log In</a></p></li>
+          <li><p><a href="#">Log Out</a></p></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-4"></div>
     </div>
 
   </body>
