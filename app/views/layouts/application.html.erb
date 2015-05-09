@@ -29,9 +29,7 @@
 
     <!-- Admin Login Nav -->
     <div class="row admin">
-      <div class="col-xs-4"></div>
-
-      <div class="col-xs-12">
+      <div class="col-xs-4 col-xs-offset-4">
         <% if admin_signed_in? %>
           <ul class="admin-nav">      
             <li><p><%= link_to 'Admin Page', edit_admin_registration_path %></p></li>
@@ -42,16 +40,16 @@
             <li><p><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p></li>
           </ul>
         <% end %>
+
+        <!-- devise alerts -->
+        <div class="post-style">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
       </div>
-
-      <div class="col-xs-4"></div>
     </div>
 
-    <!-- devise alerts -->
-    <div class="post-style">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    
 
   </body>
 </html>

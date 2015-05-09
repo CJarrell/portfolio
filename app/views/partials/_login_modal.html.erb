@@ -1,43 +1,33 @@
 <div class="modal fade" id="login">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content modal-style">
       <div class="modal-header">
-
-        <button class="close" data-dismiss="modal">x</button>
-
-        <h2 class="modal-style">Sign In</h2>
-        <p class="modal-style">For admin only!<p>
-
+        <div class="modal-style">
+          <h2>Sign In</h2>
+          <p>For admin only!</p>
+        </div>
       </div>
 
-      <div class="modal-body">
+      <div class="modal-body modal-style">
         <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-          <div class="modal-style">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, :autofocus => true %>
-          </div>
-
-          <div class="modal-style">
-            <%= f.label :password %><br />
-            <%= f.password_field :password %>
-          </div>
+          <%= f.label :email %><br />
+          <%= f.email_field :email, :autofocus => true %>
+  
+          <%= f.label :password %><br />
+          <%= f.password_field :password %>
 
           <% if devise_mapping.rememberable? -%>
 
-          <div class="modal-style">
+          <div>
             <%= f.check_box :remember_me %> <%= f.label :remember_me %>
           </div>
 
-          <% end -%>
+        <% end -%>
       </div>
-        <%= f.submit "Sign in", :class => 'btn btn-small btn-success' %>
-        <% end %>
-    </div>
 
       <div class="modal-footer">
-
-        <%= render "devise/shared/links" %>
-
+        <%= f.submit "Sign in", :class => 'btn btn-small btn-success' %>
+        <% end %>
       </div>
     </div>
   </div>
