@@ -6,10 +6,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script type="text/javascript"> 
+      $(function () { $("#myModal").modal({show:false }); 
+    </script>
   </head>
   <body>
     <!-- Render navbar partial -->
-    <%= render 'shared/navbar' %>
+    <%= render 'partials/navbar' %>
+    
+    <!-- Render devise partial -->
+    <%= render "partials/login_modal" %>
 
     <!-- Logo -->
     <div class="banner">
@@ -19,12 +25,6 @@
     <!-- Render content page -->
     <div>
       <%= yield %>
-    </div>
-
-    <!-- devise alerts -->
-    <div class="post-style">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
     </div>
 
     <!-- Admin Login Nav -->
@@ -39,12 +39,18 @@
           </ul>
         <% else %>
           <ul class="admin-nav">
-            <li><p><%= link_to('Login', new_admin_session_path ) %></p></li>
+            <li><p><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p></li>
           </ul>
         <% end %>
       </div>
 
       <div class="col-xs-4"></div>
+    </div>
+
+    <!-- devise alerts -->
+    <div class="post-style">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </div>
 
   </body>
