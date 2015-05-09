@@ -32,10 +32,16 @@
       <div class="col-xs-4"></div>
 
       <div class="col-xs-12">
-        <ul class="admin-nav">      
-          <li><p><a href="#">Log In</a></p></li>
-          <li><p><a href="#">Log Out</a></p></li>
-        </ul>
+        <% if admin_signed_in? %>
+          <ul class="admin-nav">      
+            <li><p><%= link_to 'Admin Page', edit_admin_registration_path %></p></li>
+            <li><p><%= link_to 'Log Out', destroy_admin_session_path, :method=>'delete' %></p></li>
+          </ul>
+        <% else %>
+          <ul class="admin-nav">
+            <li><p><%= link_to('Login', new_admin_session_path ) %></p></li>
+          </ul>
+        <% end %>
       </div>
 
       <div class="col-xs-4"></div>
