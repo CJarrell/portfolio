@@ -30,11 +30,6 @@
   font-family: Optima;
 }
 
-.about {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
 .date {
   font-family: Optima;
   font-size: 0.75em;
@@ -45,20 +40,17 @@
   text-decoration: underline;
 }
 
+
+
+.admin-buttons {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
 .list {
   list-style: none;
-   text-align: center;
-}
-
-
-.admin-nav li {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.admin {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: -41px;
 }
 
 .modal-dialog {

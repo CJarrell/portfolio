@@ -31,26 +31,23 @@
     
     <div class="divider-bottom">
       <!-- Admin Login Nav -->
-      <div class="admin">
-        <div class="col-xs-2 col-xs-offset-5">
-          <% if admin_signed_in? %>
-            <ul class="list">      
-              <li><p><%= link_to 'Admin Page', admin_path %></p></li>
-              <li><p><%= link_to 'Log Out', destroy_admin_session_path, :method=>'delete' %></p></li>
-            </ul>
-          <% else %>
-            <p class="admin-buttons"><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p>
-          <% end %>
-
-          <!-- devise alerts -->
-          <div class="post-style">
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
-          </div>
-        </div>
+      <div class="admin admin-buttons">
+        <% if admin_signed_in? %>
+          <ul class="list">      
+            <li><p><%= link_to 'Admin Page', admin_path %></p></li>
+            <li><p><%= link_to 'Log Out', destroy_admin_session_path, :method=>'delete' %></p></li>
+          </ul>
+        <% else %>
+          <p class="admin-buttons"><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p>
+        <% end %>
       </div>
     </div>
-      
+    
+    <!-- devise alerts -->
+    <div class="post-style">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div> 
 
   </body>
 </html>
