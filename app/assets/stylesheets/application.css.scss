@@ -8,7 +8,6 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  border-bottom: dotted #222222;
 }
 
 .post-style {
@@ -84,4 +83,17 @@
   text-align: center;
 }
 
+.carousel-inner {
+  height: 20em;
+  border-top: groove #222222;
+  border-bottom: groove #222222;
+}
 
+.footer {
+  background-image: url("stripes.jpg");
+  height: 5ems;
+  width: 10ems;
+  border-top: groove #222222;
+  border-bottom: groove #222222;
+  
+}
