@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 
   def blog
     @active_page = "blog"
-    @posts = Post.all
+    @posts = Post.all.order('created_at Desc')
   end
 
   def contact
@@ -18,6 +18,6 @@ class PagesController < ApplicationController
 
   def admin
     @active_page = "admin"
-    @posts = Post.all
+    @posts = Post.all.order('created_at Desc')
   end
 end

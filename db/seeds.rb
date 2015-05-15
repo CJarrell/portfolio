@@ -1,5 +1,1 @@
 Post.create title: "First post", body: "A seed post"
-Post.create title: "2nd post", body: "A seed post"
-Post.create title: "3rd post", body: "A seed post"
-Post.create title: "4th post", body: "A seed post"
-Post.create title: "5th post", body: "A seed post"
