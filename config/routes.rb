@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-
+  resources :posts
   devise_for :admins
   root 'pages#home'
 
   get "gallery" => "pages#gallery", as: :gallery
   get "blog" => "pages#blog", as: :blog
   get "contact" => "pages#contact", as: :contact
- 
+  get "admin" => "pages#admin", as: :admin
+  get "new" => "posts#new", as: :new
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

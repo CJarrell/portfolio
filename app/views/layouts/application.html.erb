@@ -21,25 +21,25 @@
     <div class="banner">
       <%= image_tag("TTT-logo-v2_1.png", :size => "1100x125") %>
     </div>
-
+    <div class="divider-top">
+    
+    </div>
     <!-- Render content page -->
     <div>
       <%= yield %>
     </div>
     
-    <div class="divider">
+    <div class="divider-bottom">
       <!-- Admin Login Nav -->
-      <div class="row admin">
-        <div class="col-xs-4 col-xs-offset-4">
+      <div class="admin">
+        <div class="col-xs-2 col-xs-offset-5">
           <% if admin_signed_in? %>
-            <ul class="admin-nav">      
-              <li><p><%= link_to 'Admin Page', edit_admin_registration_path %></p></li>
+            <ul class="list">      
+              <li><p><%= link_to 'Admin Page', admin_path %></p></li>
               <li><p><%= link_to 'Log Out', destroy_admin_session_path, :method=>'delete' %></p></li>
             </ul>
           <% else %>
-            <ul class="admin-nav">
-              <li><p><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p></li>
-            </ul>
+            <p class="admin-buttons"><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p>
           <% end %>
 
           <!-- devise alerts -->

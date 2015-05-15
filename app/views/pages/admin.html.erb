@@ -1,5 +1,14 @@
-
 <div class="container">
+  
+
+  <div class="col-xs-8 col-xs-offset-2">
+    <ul class="admin-buttons list">      
+      <li><p><%= link_to 'New', admin_path %></p></li>
+    </ul>
+  </div>
+
+
+
   <div class="col-xs-8 col-xs-offset-2">
     <div class="post-style">
       <% @posts.each do |p| %>
@@ -8,5 +17,5 @@
       <% end %>
     </div>
   </div>
-</div>
-
+  
+</div> 

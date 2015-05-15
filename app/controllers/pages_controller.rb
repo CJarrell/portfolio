@@ -15,4 +15,9 @@ class PagesController < ApplicationController
   def contact
     @active_page = "contact"
   end
+
+  def admin
+    @active_page = "admin"
+    @posts = Post.all
+  end
 end

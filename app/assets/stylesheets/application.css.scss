@@ -35,22 +35,25 @@
   margin-right: 100px;
 }
 
+.date {
+  font-family: Optima;
+  font-size: 0.75em;
+  font-style: italic;
+}
+
 .list-header {
   text-decoration: underline;
 }
 
 .list {
   list-style: none;
+   text-align: center;
 }
+
 
 .admin-nav li {
-  display: inline;
   margin-right: auto;
   margin-left: auto;
-}
-
-.admin-nav p{
-  text-align: center;
 }
 
 .admin {
@@ -83,17 +86,31 @@
   text-align: center;
 }
 
+.sign-up {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .carousel-inner {
   height: 20em;
   border-top: groove #222222;
   border-bottom: groove #222222;
 }
 
-.divider {
+.divider-top {
   background-image: url("stripes.jpg");
-  height: 35px;
+  height: 15px;
   width: 10ems;
   border-top: groove #222222;
   border-bottom: groove #222222;
-  
 }
+
+.divider-bottom {
+  background-image: url("stripes.jpg");
+  height: 55px;
+  width: 10ems;
+  border-top: groove #222222;
+  border-bottom: groove #222222;
+}
+
