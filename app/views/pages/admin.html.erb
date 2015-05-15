@@ -15,7 +15,7 @@
         <h1 class="titles"><%= p.title %></h1></br>
         <p class="date"><%= p.created_at.strftime("%B %d, %Y") %></p>
         <ul class="row list admin-buttons">
-          
+          <li><%= link_to 'Edit', edit_post_path(p) %></li>
           <li><%= link_to 'Delete', post_path(p), method: :delete, data: {confirm: "Are you sure?"} %></li>
           
         </ul>
