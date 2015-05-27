@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def gallery
     @active_page = "gallery"
+    @projects = Project.all
   end
 
   def blog
