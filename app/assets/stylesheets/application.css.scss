@@ -49,10 +49,14 @@
 }
 
 .admin-buttons {
+
   font-family: Optima;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  -webkit-box-shadow: inset -1px 2px 7px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset -1px 2px 7px 0px rgba(0,0,0,0.75);
+  box-shadow: inset -1px 2px 7px 0px rgba(0,0,0,0.75);
 }
 
 .list {
@@ -115,7 +119,7 @@
 
 //masonry styling
 #masonry-container {
-  background: black;
+  background: #222222;
   padding: 5px;
   margin: 20px;
   border-radius: 5px;
@@ -123,6 +127,9 @@
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
+  h1 {
+    color: #F49231;
+  }
 }
 
 
@@ -134,14 +141,21 @@
 .clearfix { zoom: 1; }
 
 .box {
-  background-color: black;
-  border: 1px solid #F49231;
-
+  -webkit-box-shadow: inset 1px -1px 3px 0px rgba(82,80,82,1);
+  -moz-box-shadow: inset 1px -1px 3px 0px rgba(82,80,82,1);
+  box-shadow: inset 1px -1px 3px 0px rgba(82,80,82,1);
+  background-color: #F49231;
+  border: 1px solid  ;
+  img {
+  -webkit-box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
+  }
   a {
-    color: #F49231;
+    color: #222222;
   }
   h2 {
-    
+    text-shadow: -2px 0px 0px rgba(82,80,82,1);
     font-size: 2em;
     font-family: Optima;
     text-decoration: none;
