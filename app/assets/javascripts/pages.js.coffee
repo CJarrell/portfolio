@@ -8,5 +8,6 @@ $ ->
     $('#masonry-container').masonry
       itemSelector: '.box'
       isAnimated: !Modernizr.csstransitions
+      isOriginLeft: false
       isFitWidth: true
       isRTL: false

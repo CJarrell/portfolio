@@ -49,7 +49,6 @@
 }
 
 .admin-buttons {
-
   font-family: Optima;
   margin-right: auto;
   margin-left: auto;
@@ -104,7 +103,7 @@
 .divider-top {
   background-image: url("stripes.jpg");
   height: 15px;
-  width: 10ems;
+
   border-top: groove #222222;
   border-bottom: groove #222222;
 }
@@ -112,7 +111,6 @@
 .divider-bottom {
   background-image: url("stripes.jpg");
   height: 55px;
-  width: 10ems;
   border-top: groove #222222;
   border-bottom: groove #222222;
 }
@@ -146,19 +144,37 @@
   box-shadow: inset 1px -1px 3px 0px rgba(82,80,82,1);
   background-color: #F49231;
   border: 1px solid  ;
+  
+ 
   img {
   -webkit-box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  border: 1px solid black;
   }
   a {
     color: #222222;
   }
   h2 {
-    text-shadow: -2px 0px 0px rgba(82,80,82,1);
+    text-shadow: -1px 0px 0px rgba(82,80,82,0);
     font-size: 2em;
     font-family: Optima;
     text-decoration: none;
     text-align: center;
+  }
+}
+
+.box:hover {
+  background: #222222;
+  border: 1px solid #F49231;
+  cursor: pointer;
+  img {
+  -webkit-box-shadow: -1px 2px 2px 0px rgba(244,146,49,1);
+  -moz-box-shadow: -1px 2px 2px 0px rgba(244,146,49,1);
+  box-shadow: -1px 2px 2px 0px rgba(244,146,49,1);
+  }
+  a {
+    color: #F49231;
   }
 }
