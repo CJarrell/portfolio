@@ -10,8 +10,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.top-pop {
+  height: 12px;
+  background-color: #222222;
+  border-bottom: 1px solid #F69331;
+}
+
+.navbar {
+  border: 2px solid #F69331;
+  border-radius: 30px;
+}
+
+.navbar-nav {
+  border-bottom: 1.5px solid #F69331;
+}
+
 .banner {
-  margin-top: -15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -53,9 +67,7 @@
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  -webkit-box-shadow: inset -1px 2px 7px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset -1px 2px 7px 0px rgba(0,0,0,0.75);
-  box-shadow: inset -1px 2px 7px 0px rgba(0,0,0,0.75);
+  
 }
 
 .list {
@@ -78,7 +90,7 @@
 .modal-content {
   height: 348px;
   background-image: url("stripes.jpg");
-  color: #EC911D;
+  color: #F69331;
 }
 
 .modal-style {
@@ -101,31 +113,43 @@
 }
 
 .divider-top {
-  background-color: #F69331;
-  height: 15px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
 
-  border-top: groove #222222;
-  border-bottom: groove #222222;
-  
 }
 
 .divider-bottom {
-  background-color: #F69331;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #222222;
   height: 40px;
-  border-top: groove #222222;
-  border-bottom: groove #222222;
+  width: 1200px;
+  border: 2px solid #F69331;
+  border-radius: 20px;
 }
 
 //masonry styling
+#grid {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 #masonry-container {
   background: #222222;
   padding: 5px;
-  margin: 5px;
+
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   border-radius: 5px;
+  border: 1px solid #F69331;
   clear: both;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
   h1 {
     color: #F69331;
   }
@@ -140,11 +164,16 @@
 .clearfix { zoom: 1; }
 
 .box {
+  
+  margin-bottom: 20px;
   -webkit-box-shadow: inset 1px -1px 3px 0px rgba(82,80,82,1);
   -moz-box-shadow: inset 1px -1px 3px 0px rgba(82,80,82,1);
   box-shadow: inset 1px -1px 3px 0px rgba(82,80,82,1);
   background-color: #F69331;
-  border: 1px solid  ;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 5s; /* Safari */
+  transition-property: background;
+  transition-duration: 5s;
   
  
   img {
@@ -167,7 +196,7 @@
 }
 
 .box:hover {
-  background: #222222;
+  background-color: #222222;
   border: 1px solid #F69331;
   cursor: pointer;
   img {
