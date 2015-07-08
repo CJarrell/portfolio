@@ -1,18 +1,22 @@
-<div class="container home">
+<div class="container-fluid home">
   <div class="row">
     <div class="col-xs-12 col-md-12 col-lg-12">
       
-      <div>
-        <div class="home-tabs">
+      <div class="home-screen-panels">
+        <div>
           <!-- Nav tabs -->
-          <ul class="nav nav-tabs titles tabs" role="tablist">
+          <ul class="nav nav-tabs tabs" role="tablist">
 
             <li role="presentation" class="active">
-              <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Post Production</a>
+              <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">Post Production</a>
             </li>
 
             <li role="presentation">
-              <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Design+Development</a>
+              <a href="#graphic-design" aria-controls="graphic-design" role="tab" data-toggle="tab">Graphic Design</a>
+            </li>
+
+            <li role="presentation">
+              <a href="#web-development" aria-controls="web-development" role="tab" data-toggle="tab">Web Development</a>
             </li>
 
           </ul>
@@ -20,12 +24,16 @@
           <!-- Tab panes home-tab-content -->
           <div>
 
-            <div role="tabpanel" class="tab-pane fade in active" id="home">
+            <div role="tabpanel" class="tab-pane fade in active" id="post-production">
               <%= render 'partials/post_production_panel' %>
             </div>
 
-            <div role="tabpanel" class="tab-pane fade" id="profile">
-              <%= render 'partials/design_development_panel' %>
+            <div role="tabpanel" class="tab-pane fade" id="graphic-design">
+              <%= render 'partials/graphic_design_panel' %>
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="web-development">
+              <%= render 'partials/web_development_panel' %>
             </div>
           </div>
         </div>

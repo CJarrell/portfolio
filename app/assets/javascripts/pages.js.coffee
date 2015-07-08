@@ -7,7 +7,14 @@ $ ->
   $('#masonry-container').imagesLoaded ->
     $('#masonry-container').masonry
       itemSelector: '.box'
-      isAnimated: !Modernizr.csstransitions
+      columnWidth: (containerWidth) ->
+        containerWidth / 5
+      isAnimated: true
+      animationOptions: ->
+        duration: 150,
+        easing: 'ease',
+        queue: false
+      
       isOriginLeft: false
       isFitWidth: true
       isRTL: false
