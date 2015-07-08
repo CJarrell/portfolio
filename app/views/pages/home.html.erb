@@ -1,17 +1,37 @@
 <div class="container home">
   <div class="row">
-  
-    <div class="col-xs-12 col-md-4 col-lg-4 home-content">
+    <div class="col-xs-12 col-md-12 col-lg-12">
       
-    </div>
+      <div>
+        <div class="home-tabs">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs titles tabs" role="tablist">
 
-    <div class="col-xs-12 col-md-4 col-lg-4 home-content">
-      
-    </div>
+            <li role="presentation" class="active">
+              <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Post Production</a>
+            </li>
 
-    <div class="col-xs-12 col-md-4 col-lg-4 home-content">
-      
-    </div>
+            <li role="presentation">
+              <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Design+Development</a>
+            </li>
 
+          </ul>
+
+          <!-- Tab panes home-tab-content -->
+          <div>
+
+            <div role="tabpanel" class="tab-pane fade in active" id="home">
+              <%= render 'partials/post_production_panel' %>
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="profile">
+              <%= render 'partials/design_development_panel' %>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
   </div>
 </div>

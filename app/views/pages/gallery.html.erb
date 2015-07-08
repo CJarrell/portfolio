@@ -1,19 +1,21 @@
+<div class="container-fluid">
+  <div id="grid">
 
-<div id="grid">
-  <div class="transitions-enabled infinite-scroll clearfix" id="masonry-container"> 
-    
-    <% @projects.each do |project| %>
+    <div class="transitions-enabled infinite-scroll clearfix" id="masonry-container"> 
       
-      <div class="box">
-        <%= link_to (image_tag project["covers"]["404"]), project["url"], :class =>'pulse' %>
-        <div class="panel-body">
-          <h2 class="titles">
-            <%= link_to project["name"], project["url"], :class =>'pulse' %>
-          <h2>
-        </div>
+      <% @projects.each do |project| %>
         
-      </div>
-    <% end %> 
-    
+        <div class="box">
+          <%= link_to (image_tag project["covers"]["404"]), project["url"], :class =>'pulse' %>
+          <div class="panel-body">
+            <h2 class="titles">
+              <%= link_to project["name"], project["url"] %>
+            <h2>
+          </div>
+          
+        </div>
+      <% end %> 
+      
+    </div>
   </div>
 </div>

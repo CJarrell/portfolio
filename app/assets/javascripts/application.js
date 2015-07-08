@@ -17,6 +17,7 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
+
 $(function(){
   var time = 200;
   $(".box").each( function(element){
