@@ -17,12 +17,6 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-$( document ).ready(function() {
-  $('#myTab').tabCollapse({
-    tabsClass: 'hidden-sm hidden-xs',
-    accordionClass: 'visible-sm visible-xs'
-});
-});
 
 $(function(){
   var time = 200;
