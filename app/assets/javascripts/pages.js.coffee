@@ -18,3 +18,4 @@ $ ->
       isOriginLeft: false
       isFitWidth: true
       isRTL: false
+

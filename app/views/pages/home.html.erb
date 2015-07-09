@@ -5,7 +5,7 @@
       <div class="home-screen-panels">
         <div>
           <!-- Nav tabs -->
-          <ul class="nav nav-tabs tabs" role="tablist">
+          <ul id="myTab" class="nav nav-tabs"  role="tablist">
 
             <li role="presentation" class="active">
               <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">Post Production</a>
@@ -22,10 +22,11 @@
           </ul>
 
           <!-- Tab panes home-tab-content -->
-          <div>
+          <div class="tab-content tab-panels">
 
             <div role="tabpanel" class="tab-pane fade in active" id="post-production">
               <%= render 'partials/post_production_panel' %>
+             
             </div>
 
             <div role="tabpanel" class="tab-pane fade" id="graphic-design">
