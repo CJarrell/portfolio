@@ -3,40 +3,40 @@
     <div class="col-xs-12 col-md-12 col-lg-12">
       
       <div class="home-screen-panels">
-        <div>
-          <!-- Nav tabs -->
-          <ul id="myTab" class="nav nav-tabs"  role="tablist">
+        
+        <!-- Nav tabs -->
+        <ul id="myTab" class="nav nav-tabs navtab-justified" id="btn-responsive"  role="tablist">
 
-            <li role="presentation" class="active">
-              <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">Post Production</a>
-            </li>
+          <li role="presentation" class="active">
+            <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">Post Production</a>
+          </li>
 
-            <li role="presentation">
-              <a href="#graphic-design" aria-controls="graphic-design" role="tab" data-toggle="tab">Graphic Design</a>
-            </li>
+          <li role="presentation">
+            <a href="#graphic-design" aria-controls="graphic-design" role="tab" data-toggle="tab">Graphic Design</a>
+          </li>
 
-            <li role="presentation">
-              <a href="#web-development" aria-controls="web-development" role="tab" data-toggle="tab">Web Development</a>
-            </li>
+          <li role="presentation">
+            <a href="#web-development" aria-controls="web-development" role="tab" data-toggle="tab">Web Development</a>
+          </li>
 
-          </ul>
+        </ul>
 
-          <!-- Tab panes home-tab-content -->
-          <div class="tab-content tab-panels">
+        <!-- Tab panes home-tab-content -->
+        <div class="tab-content tab-panels">
 
-            <div role="tabpanel" class="tab-pane fade in active" id="post-production">
-              <%= render 'partials/post_production_panel' %>
-             
-            </div>
-
-            <div role="tabpanel" class="tab-pane fade" id="graphic-design">
-              <%= render 'partials/graphic_design_panel' %>
-            </div>
-
-            <div role="tabpanel" class="tab-pane fade" id="web-development">
-              <%= render 'partials/web_development_panel' %>
-            </div>
+          <div role="tabpanel" class="tab-pane fade in active" id="post-production">
+            <%= render 'partials/post_production_panel' %>
+           
           </div>
+
+          <div role="tabpanel" class="tab-pane fade" id="graphic-design">
+            <%= render 'partials/graphic_design_panel' %>
+          </div>
+
+          <div role="tabpanel" class="tab-pane fade" id="web-development">
+            <%= render 'partials/web_development_panel' %>
+          </div>
+        
         </div>
 
         

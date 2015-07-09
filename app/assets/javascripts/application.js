@@ -33,3 +33,10 @@ $(function(){
 
 });
 
+
+$( document ).ready(function() {
+  $("#btn-responsive").bootstrap-responsive-tabs({
+    minTabWidth: "50",
+    maxTabWidth: "200"
+  });
+});)
