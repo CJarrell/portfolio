@@ -28,7 +28,5 @@ $(function(){
       box.addClass("bigEntrance");
     }, time)
     time += 100;
-  
   });
-
 });
