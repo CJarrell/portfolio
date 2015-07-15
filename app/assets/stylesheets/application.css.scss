@@ -25,6 +25,7 @@
 .navbar {
   border: 2px solid #F69331;
   border-radius: 30px;
+  
 }
 
 .navbar-nav {
@@ -116,7 +117,7 @@
 
 
 .home-screen-panels { 
-
+  
   background-color: #222222;
   border: 3px groove #F69331;
   border-radius: 20px;
@@ -130,7 +131,7 @@
   float:none;
   display:inline-block;
   *display:inline; /* ie7 fix */
-  zoom:1; /* hasLayout ie7 trigger */
+  zoom: 1; /* hasLayout ie7 trigger */
 
 }
 
