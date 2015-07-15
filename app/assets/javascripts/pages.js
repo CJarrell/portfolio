@@ -1,7 +1,16 @@
+//= require jquery
+//= require jquery_ujs
+//= require masonry/jquery.masonry
+//= require turbolinks
+//= require_tree .
+//= require bootstrap-sprockets
 
-
-$('#masonry-container').masonry({
-  isAnimated: !Modernizr.csstransitions,
-  itemSelector: '.box',
-  isFitWidth: true,
+var $container = $('#masonry-container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+    itemSelector : '.box',
+    columnWidth : 240,
+    isAnimated: !Modernizr.csstransitions
+  });
 });
+
