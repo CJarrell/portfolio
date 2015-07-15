@@ -4,7 +4,7 @@
       <div class="transitions-enabled infinite-scroll clearfix" id="masonry-container"> 
         
         <% @projects.each do |project| %>
-          
+           
           <div class="box">
             <%= link_to (image_tag project["covers"]["404"]), project["url"], :class =>'pulse' %>
             <div class="panel-body">
