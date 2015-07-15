@@ -14,9 +14,13 @@
 //= require jquery_ujs
 //= require masonry/jquery.masonry
 //= require turbolinks
+//= require bxslider
 //= require_tree .
 //= require bootstrap-sprockets
 
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
 
 $(function(){
   var time = 200;

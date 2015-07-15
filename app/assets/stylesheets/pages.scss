@@ -2,8 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
+// bxslider-carousel 
+.bxslider{
+  width:auto;
+  background-color:#222222;
+}
+.bx-viewport, .bx-wrapper img {
+  border: 1px solid #F69331;
+  -webkit-border-radius:10px;
+  -khtml-border-radius:10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+.bx-next, .bx-prev {
+  -webkit-border-radius:30px;
+  -khtml-border-radius:30px;
+  -moz-border-radius:30px;
+  -o-border-radius:30px;
+  border-radius:30px;
+  border: 1px solid #F69331;
+}
 //masonry styling
 #masonry-container {
   background: #222222;
