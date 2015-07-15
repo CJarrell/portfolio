@@ -184,11 +184,13 @@
 
 .tab-pane {
     background-color: #474747;
-
+    margin-left: 5px;  
+    margin-right: 5px;
+    margin-bottom: 5px;
     border-left: 1px solid #F69331;
     border-right: 1px solid #F69331;
     border-bottom: 1px solid #F69331;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 15px 15px;
     padding: 10px;
 }
 

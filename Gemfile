@@ -34,8 +34,6 @@ gem 'behance', '~> 0.5.1'
 # Masonry
 gem 'masonry-rails', '~> 0.2.4'
 
-# Modernizr
-gem 'modernizr-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
