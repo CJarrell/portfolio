@@ -2,54 +2,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>Time Traveling Tiger</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <script type="text/javascript"> 
-      $(function () { 
-        $("#myModal").modal({show:false });
-      }); 
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
   </head>
   <body>
-    <!-- Render navbar partial -->
-    <%= render 'partials/navbar' %>
-    
     <!-- Render devise partial -->
     <%= render "partials/login_modal" %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
 
-    <!-- Logo -->
-    <div class="banner">
-      <%= image_tag("TTT-logo-v2_1.png", :size => "1100x125") %>
-    </div>
-    <div class="divider-top">
-    
-    </div>
-    <!-- Render content page -->
-    <div>
-      <%= yield %>
-    </div>
-    
-    <div class="divider-bottom">
-      <!-- Admin Login Nav -->
-      <div class="admin admin-buttons">
-        <% if admin_signed_in? %>
-          <ul class="list">      
-            <li><p><%= link_to 'Admin Page', admin_path %></p></li>
-            <li><p><%= link_to 'Log Out', destroy_admin_session_path, :method=>'delete' %></p></li>
-          </ul>
-        <% else %>
-          <p><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p>
-        <% end %>
+          <div class="top-pop slideDown">
+            
+          </div>
+          <!-- Logo -->
+          <div class="banner fadeIn">
+            <%= image_tag("TTT-logo-v2_1.png", :size => "1100x125", :class => "img-responsive center-block") %>
+          </div>
+          
+          <%= render 'partials/navbar' %>
+
+          <!-- Render content page -->
+          <div>
+            <%= yield %>
+          </div>
+          
+          <div class="divider-bottom slideUp">
+            <!-- Admin Login Nav -->
+            <div class="admin admin-buttons">
+              <% if admin_signed_in? %>
+                <ul class="list">      
+                  <li><p><%= link_to 'Admin Page', admin_path %></p></li>
+                  <li><p><%= link_to 'Log Out', destroy_admin_session_path, :method=>'delete' %></p></li>
+                </ul>
+              <% else %>
+                <p><%= link_to "Login", "#login", "data-toggle" => "modal", :class =>'btn bt-small' %></p>
+              <% end %>
+            </div>
+          </div>
+          
+          <!-- devise alerts -->
+          <div class="post-style">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+          </div>
+
+        </div>
       </div>
     </div>
-    
-    <!-- devise alerts -->
-    <div class="post-style">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div> 
 
   </body>
 </html>
+

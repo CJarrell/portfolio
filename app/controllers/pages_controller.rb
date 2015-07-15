@@ -1,10 +1,11 @@
 class PagesController < ApplicationController
   def home
-    @active_page = "home"
-  end
+    @active_page = "home"      
+  end 
 
   def gallery
     @active_page = "gallery"
+    @projects = Project.all
   end
 
   def blog
@@ -20,4 +21,5 @@ class PagesController < ApplicationController
     @active_page = "admin"
     @posts = Post.all.order('created_at Desc')
   end
+ 
 end

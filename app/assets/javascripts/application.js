@@ -12,6 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+
+$(function(){
+  var time = 200;
+  $(".box").each( function(element){
+    var box = $(this)
+    box.hide();
+    setTimeout(function(){
+      box.show();
+      box.addClass("bigEntrance");
+    }, time)
+    time += 100;
+  });
+});

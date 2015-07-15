@@ -1,71 +1,47 @@
+<div class="container-fluid home">
+  <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+      
 
-<!-- Render j_tron partial -->
-<%= render 'partials/j_tron' %>
+      <div class="home-screen-panels">
+      
+        <!-- Nav tabs -->
+        <ul id="myTab" class="nav nav-tabs" role="tablist">
 
-<div class="container">
-  <div class="post-style">
-    <h1 class="titles">What is Time Traveling Tiger</h1>
-    <p class="body">
-      Time Traveling Tiger is a forward thinking brand that provides a variety of creative services to it's clients.
-      We are about helping small businesses, corporations and even individuals develop their brand by creating stunning digital media. Nowadays companies must have a digital presence. Having a website is a start, but their is so much more that can be done.
-    </p>
+          <li role="presentation" class="active">
+            <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">Post Production</a>
+          </li>
 
-    <p class="body">
-      One strategy is to design a print campaign. Mailing our custom designed flyers to your customers is a great way to keep your business on their mind. Another graphic design service we offer is logo design. A logo is not just words and symbols, a great logo must have multi-faceted meaning that is tied to emotion. Your business should leave a lasting impression on your customers and a beautiful logo is the way to do it. 
-    </p>
+          <li role="presentation">
+            <a href="#graphic-design" aria-controls="graphic-design" role="tab" data-toggle="tab">Graphic Design</a>
+          </li>
 
-    <p class="body">
-      You could also benefit from having an online video presence. Imagine posting a funny or entertaining series of videos on social media that explains the services you provide to your clients. Your brand could go viral. TTT also specializes in enterprise training videos. One of our most memorable clients is Ted's Montana Grill. Ted's asked us to create a series of videos to train its staff about Wine. We were happy to oblige by creating quality content that was informative as well as entertaining.
-    </p>
-    <p class="body">
-      Another scenario is that your your business is locally successful, you have never seen the need for a website.Until now, all of your competition has a website and the lack of a web presence is costing you money. Time Traveling Tiger has experience with the modern web, we can create a web presence for your business that is up to date with the internet of today. Imagine giving your customers a convenient way to learn about you that is responsive and viewable on any mobile viewing device(Ipad, Iphone, Android). Imagine how your business would flourish.
-    </p>
-  </div>
-</div>
+          <li role="presentation">
+            <a href="#web-development" aria-controls="web-development" role="tab" data-toggle="tab">Web Development</a>
+          </li>
 
-<!-- Render j_tron partial -->
-<%= render 'partials/j_tron_two' %>
+        </ul>
 
-<div class="container"> 
-  <div class="post-style">
-    <h1 class="titles">What can Time Traveling Tiger do for you?</h1>
-    <p class="body">
-      Time Traveling Tiger provides a variety of creative services to it's clients:
-    </p>
-  </div>
- 
-  <div class="services">
-    <div class="col-xs-4">
-      <div class="list post-style">
-        <li class="list-header body">Graphic Design</li>
-        <li class="sub-body">Logo Design</li>
-        <li class="sub-body">Flyer Design</li>
-        <li class="sub-body">Merchandise Design</li>
-        <li class="sub-body">Web Design</li>
-     </div>
-    </div>
+        <!-- Tab panes home-tab-content -->
+        <div id="myTabContent" class="tab-content tab-panels">
 
-    <div class="col-xs-4">
-      <ul class="list post-style">
-        <li class="list-header body">Video Editing</li>
-        <li class="sub-body">Sound Design</li>
-        <li class="sub-body">Motion Graphics</li>
-        <li class="sub-body">3D Compositing</li>
-        <li class="sub-body">Color Correcting</li>
-        <li class="sub-body">DVD Authoring</li>
-     </ul>
-    </div>
+          <div role="tabpanel" class="tab-pane fade in active" id="post-production">
+            <%= render 'partials/post_production_panel' %>
+           
+          </div>
 
-    <div class="col-xs-4">
-      <ul class="list post-style">
-        <li class="list-header body">Web Development</li>
-        <li class="sub-body">HTML / CSS</li>
-        <li class="sub-body">Jquery / Javascript</li>
-        <li class="sub-body">Ruby on Rails</li>
-        <li class="sub-body">Deployment</li>
-     </ul>
+          <div role="tabpanel" class="tab-pane fade" id="graphic-design">
+            <%= render 'partials/graphic_design_panel' %>
+          </div>
+
+          <div role="tabpanel" class="tab-pane fade" id="web-development">
+            <%= render 'partials/web_development_panel' %>
+          </div>
+        
+        </div>
+
+        
+      </div>
     </div>
   </div>
 </div>
-
-

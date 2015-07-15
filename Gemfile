@@ -28,6 +28,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Devise users
 gem 'devise', '~> 3.4.1'
 
+# Behance API
+gem 'behance', '~> 0.5.1'
+
+# Masonry
+gem 'masonry-rails', '~> 0.2.4'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
