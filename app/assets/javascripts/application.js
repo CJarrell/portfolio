@@ -18,45 +18,82 @@
 //= require bootstrap-tabcollapse
 //= require_tree .
 //= require bootstrap-sprockets
-function checkWidth() {
-  var $width = $(window).width();
-  if($width > 960){
-    $('.home-screen-panels').css({
 
-      //for firefox
-      "-moz-animation-name":"tab-rotate",
-      "-moz-animation-duration":"2s",
-      "-moz-animation-iteration-count":"1",
-      "-moz-animation-fill-mode":"forwards",
+// function animateHSP(width) {
+//   console.log("hey");
+//   $('.home-screen-panels').css({
 
-      //for safari & chrome
-      "-webkit-animation-name":"tab-rotate",
-      "-webkit-animation-duration":"2s",
-      "-webkit-animation-iteration-count":"1",
-      "-webkit-animation-fill-mode" : "forwards",
+//     //for firefox
+//     "-moz-animation-name":"tab-rotate",
+//     "-moz-animation-duration":"2s",
+//     "-moz-animation-iteration-count":"1",
+//     "-moz-animation-fill-mode":"forwards",
 
-    });
-  } else if ($width < 960){
-    $('.home-screen-panels').css({
+//     //for safari & chrome
+//     "-webkit-animation-name":"tab-rotate",
+//     "-webkit-animation-duration":"2s",
+//     "-webkit-animation-iteration-count":"1",
+//     "-webkit-animation-fill-mode" : "forwards",
 
-      //for firefox
-      "-moz-animation-name":"tab-rotate",
-      "-moz-animation-duration":"2s",
-      "-moz-animation-iteration-count":"1",
-      "-moz-animation-fill-mode":"forwards",
+//   });
+// }
 
-      //for safari & chrome
-      "-webkit-animation-name":"tab-rotate",
-      "-webkit-animation-duration":"2s",
-      "-webkit-animation-iteration-count":"1",
-      "-webkit-animation-fill-mode" : "forwards",
+var detectViewPort = function(viewPortWidth){
+  var viewPortWidth = $(window).width();
+  return viewPortWidth;
+  
+};
 
-    });
-  }
-}
 
-$(document).ready(function(){
-  $(window).resize(checkWidth)
+$(function(){
+  detectViewPort();
+});
+
+$(window).resize(function () {
+  var screenSize = detectViewPort();
+  console.log(screenSize);
+  function animatePanel(screenSize){
+    if(screenSize > 767){
+      $(window).on('resize', function(){
+        $('.home-screen-panels').css({
+
+          //for firefox
+          "-moz-animation-name":"tab-rotate",
+          "-moz-animation-duration":"2s",
+          "-moz-animation-iteration-count":"1",
+          "-moz-animation-fill-mode":"forwards",
+
+          //for safari & chrome
+          "-webkit-animation-name":"tab-rotate",
+          "-webkit-animation-duration":"2s",
+          "-webkit-animation-iteration-count":"1",
+          "-webkit-animation-fill-mode" : "forwards",
+
+        });
+      });
+    } else if(screenSize < 767){
+      $(window).on('resize', function(){
+        $('.home-screen-panels').css({
+
+          //for firefox
+          "-moz-animation-name":"tab-rotate-2",
+          "-moz-animation-duration":"2s",
+          "-moz-animation-iteration-count":"1",
+          "-moz-animation-fill-mode":"backwards",
+
+          //for safari & chrome
+          "-webkit-animation-name":"tab-rotate-2",
+          "-webkit-animation-duration":"2s",
+          "-webkit-animation-iteration-count":"1",
+          "-webkit-animation-fill-mode" : "backwards",
+
+        });
+      });
+    } 
+  };
+  var screenSize = detectViewPort();
+  animatePanel(screenSize);
+  detectViewPort();
 });
 
 
@@ -68,17 +105,11 @@ $(document).on('page:load', function(){
   $('.bxslider').bxSlider();
 });
 
-$(document).ready(function(){
-  $(window).resize(checkWidth)
-  
-
-});
-
 
 $(document).ready(function(){
   $('#myTab').tabCollapse({
-    tabsClass: 'hidden-sm hidden-xs',
-    accordionClass: 'visible-sm visible-xs'
+    tabsClass: 'hidden-xs',
+    accordionClass: 'visible-xs'
   });
 });
 
