@@ -55,6 +55,10 @@ $(window).resize(function () {
   function animatePanel(screenSize){
     if(screenSize > 767){
       $(window).on('resize', function(){
+        $('#myTab').tabCollapse({
+          tabsClass: 'hidden-xs',
+          accordionClass: 'visible-xs'
+        });
         $('.home-screen-panels').css({
 
           //for firefox
@@ -70,9 +74,14 @@ $(window).resize(function () {
           "-webkit-animation-fill-mode" : "forwards",
 
         });
+        
       });
     } else if(screenSize < 767){
       $(window).on('resize', function(){
+        $('#myTab').tabCollapse({
+          tabsClass: 'hidden-xs',
+          accordionClass: 'visible-xs'
+        });
         $('.home-screen-panels').css({
 
           //for firefox
@@ -88,6 +97,7 @@ $(window).resize(function () {
           "-webkit-animation-fill-mode" : "backwards",
 
         });
+        
       });
     } 
   };
@@ -116,8 +126,8 @@ $(document).ready(function(){
 
 $(document).on('page:load', function(){
   $('#myTab').tabCollapse({
-    tabsClass: 'hidden-sm hidden-xs',
-    accordionClass: 'visible-sm visible-xs'
+    tabsClass: 'hidden-xs',
+    accordionClass: 'visible-xs'
   });
 });
 
