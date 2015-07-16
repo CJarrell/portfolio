@@ -15,14 +15,23 @@
 //= require masonry/jquery.masonry
 //= require turbolinks
 //= require bxslider
+//= require bootstrap-tabcollapse
 //= require_tree .
 //= require bootstrap-sprockets
 
-$(document).ready(function(){
+$(document).on('page:load', function(){
   $('.bxslider').bxSlider();
 });
 
-$(function(){
+$(document).on('page:load', function(){
+  $('#myTab').tabCollapse({
+    tabsClass: 'hidden-sm hidden-xs',
+    accordionClass: 'visible-sm visible-xs'
+  });
+
+});
+
+$(document).on('page:load', function(){
   var time = 200;
   $(".box").each( function(element){
     var box = $(this)
@@ -34,3 +43,4 @@ $(function(){
     time += 100;
   });
 });
+
