@@ -18,6 +18,47 @@
 //= require bootstrap-tabcollapse
 //= require_tree .
 //= require bootstrap-sprockets
+function checkWidth() {
+  var $width = $(window).width();
+  if($width > 960){
+    $('.home-screen-panels').css({
+
+      //for firefox
+      "-moz-animation-name":"tab-rotate",
+      "-moz-animation-duration":"2s",
+      "-moz-animation-iteration-count":"1",
+      "-moz-animation-fill-mode":"forwards",
+
+      //for safari & chrome
+      "-webkit-animation-name":"tab-rotate",
+      "-webkit-animation-duration":"2s",
+      "-webkit-animation-iteration-count":"1",
+      "-webkit-animation-fill-mode" : "forwards",
+
+    });
+  } else if ($width < 960){
+    $('.home-screen-panels').css({
+
+      //for firefox
+      "-moz-animation-name":"tab-rotate",
+      "-moz-animation-duration":"2s",
+      "-moz-animation-iteration-count":"1",
+      "-moz-animation-fill-mode":"forwards",
+
+      //for safari & chrome
+      "-webkit-animation-name":"tab-rotate",
+      "-webkit-animation-duration":"2s",
+      "-webkit-animation-iteration-count":"1",
+      "-webkit-animation-fill-mode" : "forwards",
+
+    });
+  }
+}
+
+$(document).ready(function(){
+  $(window).resize(checkWidth)
+});
+
 
 $(document).ready(function(){
   $('.bxslider').bxSlider();
@@ -26,6 +67,13 @@ $(document).ready(function(){
 $(document).on('page:load', function(){
   $('.bxslider').bxSlider();
 });
+
+$(document).ready(function(){
+  $(window).resize(checkWidth)
+  
+
+});
+
 
 $(document).ready(function(){
   $('#myTab').tabCollapse({
