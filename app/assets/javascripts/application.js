@@ -19,16 +19,27 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+
 $(document).on('page:load', function(){
   $('.bxslider').bxSlider();
 });
+
+$(document).ready(function(){
+  $('#myTab').tabCollapse({
+    tabsClass: 'hidden-sm hidden-xs',
+    accordionClass: 'visible-sm visible-xs'
+  });
+});
+
 
 $(document).on('page:load', function(){
   $('#myTab').tabCollapse({
     tabsClass: 'hidden-sm hidden-xs',
     accordionClass: 'visible-sm visible-xs'
   });
-
 });
 
 $(document).on('page:load', function(){
