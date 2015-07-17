@@ -58,7 +58,7 @@
   }
 }
 
-.dropdown{
+.dropdown {
    li:hover {
     margin-top: -5px;
     margin-bottom: -5px;
@@ -68,6 +68,10 @@
       color: #222222;
     }
   }
+}
+
+.navbar-collapse.in {
+  overflow-y: visible;
 }
 
 .banner {

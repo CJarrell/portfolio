@@ -22,19 +22,40 @@
   -o-border-radius:30px;
   border-radius:30px;
   border: 1px solid #F69331;
+  
 }
+
+// re-sponsive heading
+
+@media screen and (max-width: 767px) {
+  #re-sponsive {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #re-sponsive {
+    margin-top: -10px;
+    text-shadow: 0px 0px 5px #F69331;
+    font-family: Optima;
+    text-align: center;
+    font-size: 15px;
+    font-size: 1.5vw;
+  }
+}
+
+
+
 
 // home page tab styling
 .home-screen-panels { 
   background-color: #222222;
   border: 3px groove #F69331;
   border-radius: 20px;
-  
-  
-  
   -o-transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
   -ms-transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
   transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+  animation-timing-function: ease-out;
 }
 
 @-moz-keyframes tab-rotate /*--for firefox--*/{
@@ -101,6 +122,7 @@
   margin-left: 2px;
   margin-right: 2px;
 
+
 }
 
 
@@ -108,15 +130,24 @@
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   font-family: Impact, Charcoal, sans-serif;
-  color: #ddd;
+  color: #222222;
   font-size: 2em;
   font-size: 30px;
   font-size: 2.75vw;
   text-shadow: 0px 0px 5px #F69331;
   cursor: default;
-  background-color: #474747;
-  border: 1px solid #F69331;
-  border-bottom-color: transparent;
+  
+  background: #ddd; /* Old browsers */
+  background: -moz-linear-gradient(top,   #f69331 0%, #ddd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(00%,#f69331), color-stop(100%,#ddd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f69331 0%,#ddd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f69331 0%,#ddd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f69331 50%,#ddd 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f69331 50%,#ddd 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+
+  border-top:  3 groove #F69331; 
+  border-bottom-color: #ddd;
   -webkit-border-top-left-radius: 10px;
   -webkit-border-top-right-radius: 10px;
   -moz-border-radius-topleft: 10px;
@@ -146,7 +177,7 @@
 
 
 .tab-pane {
-    background-color: #474747;
+    background-color: #ddd;
     margin-left: 5px;  
     margin-right: 5px;
     margin-bottom: 5px;
@@ -158,7 +189,7 @@
 }
 
 .panel-style {
-  color: #F69331;
+  color: #222222;
 }
 
 //flatlogic tab-collapse styling
@@ -171,30 +202,35 @@
 
 
 .panel-inverse > .panel-heading {
-  border: 2px groove #ddd; 
-  border-radius: 30px;
-  background-color: #F69331;
-  margin: 10px;
+  border-top: 2px solid #F69331; 
+  border-radius: 15px 15px 0px 0px;
+  background-color: #474747;
+  margin: 0px;
+  cursor: pointer;
   -webkit-transition-property: background-color;
-  -webkit-transition-duration: 1.5s; /* Safari */
+  -webkit-transition-duration: 3s; /* Safari */
   transition-property: background-color;
-  transition-duration: 1.5s;
+  transition-duration: 3s;
   -webkit-transition-property: margin;
-  -webkit-transition-duration: 1.5s; /* Safari */
+  -webkit-transition-duration: 3s; /* Safari */
   transition-property: margin;
-  transition-duration: 1.5s;
-  -webkit-transition-property: border;
-  -webkit-transition-duration: 1.5s; /* Safari */
-  transition-property: border;
-  transition-duration: 1.5s;
+  transition-duration: 3s;
+  -webkit-transition-property: border-radius;
+  -webkit-transition-duration: 3s; /* Safari */
+  transition-property: border-radius;
+  transition-duration: 3s;
 
   .panel-title {
     font-family: Impact, Charcoal, sans-serif;
-    color: #222222;
+    color: #ddd;
     text-align: center;
     font-size: 2em;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    text-shadow: 0px 0px 5px #F69331;
     -webkit-transition-property: color;
+    -webkit-transition-duration: 1.5s; /* Safari */
+    transition-property: color;
+    transition-duration: 1.5s;
+    -webkit-transition-property: text-shadow;
     -webkit-transition-duration: 1.5s; /* Safari */
     transition-property: color;
     transition-duration: 1.5s;
@@ -202,14 +238,25 @@
 }
 
 .panel-inverse > .panel-heading:hover {
-  margin: 0px;
-  border: 1px solid #F69331; 
-  border-radius: 15px 15px 0px 0px;
-  background-color: #222222;
-
+  margin-left: -27px;
+  margin-right: -27px;
+  border-radius: 30px;
+  background: #ddd; /* Old browsers */
+  background: -moz-linear-gradient(top,   #ddd 0%, #f69331 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ddd), color-stop( 100%, #f69331)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ddd  0%,#f69331 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ddd  0%,#f69331 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ddd 50%,#f69331 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ddd 50%,#f69331 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+  border-top: 2px solid #ddd;
+  border-top: 2px solid #F69331;
+  
+  
   .panel-title {
     font-family: Impact, Charcoal, sans-serif;
-    color: #ddd;
+    color: #222222;
+    text-shadow: 0px 0px 5px #ddd;
     text-align: center;
     font-size: 2em;
     text-shadow: 0px 0px 3px #F69331;
@@ -218,7 +265,7 @@
 
 
 .js-tabcollapse-panel-body {
-  background-color: #474747;
+  background-color: #F69331;
   border-radius: 0px 0px 15px 15px;
   border: 1px solid #F69331;
 }
@@ -281,7 +328,15 @@
 
 .box:hover {
 
-  background-color: #474747;
+  background: #ddd; /* Old browsers */
+  background: -moz-linear-gradient(top,   #f69331 0%, #ddd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(00%,#f69331), color-stop(100%,#ddd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f69331 0%,#ddd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f69331 0%,#ddd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f69331 50%,#ddd 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f69331 50%,#ddd 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+
   border: 1px solid #F69331;
   cursor: pointer;
   img {
@@ -290,7 +345,7 @@
   box-shadow: -1px 2px 2px 0px rgba(244,146,49,1);
   }
   a {
-    color: #ddd;
+    color: #222222;
     max-width: 440px;
     text-shadow: 0px 0px 5px #F69331;
   }
