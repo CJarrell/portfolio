@@ -1,14 +1,22 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-md-12 col-lg-12">
-      <ul class="bxslider">
-        <li><%= image_tag("stripes.jpg", :size => "1100x125", :class => "img-responsive center-block") %></li>
-        <li><%= image_tag("stripes.jpg", :size => "1100x125", :class => "img-responsive center-block") %></li>
-        <li><%= image_tag("stripes.jpg", :size => "1100x125", :class => "img-responsive center-block") %></li>
-        <li><%= image_tag("stripes.jpg", :size => "1100x125", :class => "img-responsive center-block") %></li>
-      </ul>
+      
+        <ul class="bxslider">
+          <% @projects.each do |project| %>
+            <li>
+              <%= link_to (image_tag project["covers"]["404"]), project["url"], :class =>'img-responsive center block', :size => "1100x125"%>
+            </li>
+          <% end %>
+          <div class="js-video [vimeo, widescreen]">
+            <li>
+              <iframe src="https://player.vimeo.com/video/120739736" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </li>
+          </div>
+        </ul>
+      
       <h6 id="re-sponsive"><strong>Hey!</strong> If you are on a desktop or laptop try resizing your browser window.<br/>
-        TTT brings responsive web design to life with elegant animations and implementation of UI/UX principles!
+        TTT brings responsive web design to life with elegant animations and thoughtful implementation of UI/UX principles!
       </h6>
       <div class="home-screen-panels fadeIn">
       
@@ -52,9 +60,7 @@
             <%= render 'partials/web_development_panel' %>
           </div>
         
-        </div>
-
-        
+        </div>  
       </div>
     </div>
   </div>

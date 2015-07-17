@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @active_page = "home"      
+    @active_page = "home"
+    @projects = Project.all      
   end 
 
   def gallery
