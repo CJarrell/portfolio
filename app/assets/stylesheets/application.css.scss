@@ -35,6 +35,41 @@
 }
 
 
+.dropdown {
+  li{
+    cursor: pointer;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    background-color: #222222;
+    border-bottom: 1px solid #F69331;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 1.5s; /* Safari */
+    transition-property: background-color;
+    transition-duration: 1.5s;
+  
+  
+    a{
+      color: #F69331;
+      -webkit-transition-property: color;
+      -webkit-transition-duration: 1.5s; /* Safari */
+      transition-property: color;
+      transition-duration: 1.5s;
+    }
+  }
+}
+
+.dropdown{
+   li:hover {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    background-color: #F69331;
+    border-bottom: 1px solid #F69331;
+    a{
+      color: #222222;
+    }
+  }
+}
+
 .banner {
   margin-left: auto;
   margin-right: auto;
