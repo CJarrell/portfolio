@@ -7,12 +7,16 @@
         <li><%= image_tag("stripes.jpg", :size => "1100x125", :class => "img-responsive center-block") %></li>
         <li><%= image_tag("stripes.jpg", :size => "1100x125", :class => "img-responsive center-block") %></li>
       </ul>
-      <div class="home-screen-panels">
+      <div class="home-screen-panels fadeIn">
       
         <!-- Nav tabs -->
         <ul id="myTab" class="nav nav-tabs" role="tablist">
-
+          
           <li role="presentation" class="active">
+            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
+          </li>
+
+          <li role="presentation">
             <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">Post Production</a>
           </li>
 
@@ -28,10 +32,13 @@
 
         <!-- Tab panes home-tab-content -->
         <div id="myTabContent" class="tab-content tab-panels">
+          
+          <div role="tabpanel" class="tab-pane fade in active" id="about">
+            <%= render 'partials/about_panel' %>
+          </div>
 
-          <div role="tabpanel" class="tab-pane fade in active" id="post-production">
+          <div role="tabpanel" class="tab-pane fade" id="post-production">
             <%= render 'partials/post_production_panel' %>
-           
           </div>
 
           <div role="tabpanel" class="tab-pane fade" id="graphic-design">
