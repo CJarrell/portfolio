@@ -123,6 +123,13 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('#myTab').click(function(){
+    $('.icon-img').toggle(500, 'swing');
+  })
+
+});
+
 
 $(document).on('page:load', function(){
   $('#myTab').tabCollapse({

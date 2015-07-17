@@ -24,19 +24,28 @@
         <ul id="myTab" class="nav nav-tabs" role="tablist">
           
           <li role="presentation" class="active">
-            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">ABOUT</a>
+            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">
+              ABOUT
+            </a>
           </li>
 
           <li role="presentation">
-            <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">POST PRODUCTION</a>
+            <a href="#post-production" aria-controls="post-production" role="tab" data-toggle="tab">
+              POST PRODUCTION
+            </a>
+
           </li>
 
           <li role="presentation">
-            <a href="#graphic-design" aria-controls="graphic-design" role="tab" data-toggle="tab">GRAPHIC DESIGN</a>
+            <a href="#graphic-design" aria-controls="graphic-design" role="tab" data-toggle="tab">
+              GRAPHIC DESIGN
+            </a>
           </li>
 
           <li role="presentation">
-            <a href="#web-development" aria-controls="web-development" role="tab" data-toggle="tab">WEB DEVELOPMENT</a>
+            <a href="#web-development" aria-controls="web-development" role="tab" data-toggle="tab">
+              WEB DEVELOPMENT
+            </a>
           </li>
 
         </ul>
@@ -45,18 +54,22 @@
         <div id="myTabContent" class="tab-content tab-panels">
           
           <div role="tabpanel" class="tab-pane fade in active" id="about">
+            <%= image_tag("post-production-icon.svg", :size => "96x96", :class => "img-respnsive center-block icon-img") %>
             <%= render 'partials/about_panel' %>
           </div>
 
           <div role="tabpanel" class="tab-pane fade" id="post-production">
+            <%= image_tag("post-production-icon.svg", :size => "96x96", :class => "img-respnsive center-block icon-img") %>
             <%= render 'partials/post_production_panel' %>
           </div>
 
           <div role="tabpanel" class="tab-pane fade" id="graphic-design">
+            <%= image_tag("post-production-icon.svg", :size => "96x96", :class => "img-respnsive center-block icon-img") %>
             <%= render 'partials/graphic_design_panel' %>
           </div>
 
           <div role="tabpanel" class="tab-pane fade" id="web-development">
+            <%= image_tag("post-production-icon.svg", :size => "96x96", :class => "img-respnsive center-block icon-img") %>
             <%= render 'partials/web_development_panel' %>
           </div>
         

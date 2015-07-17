@@ -132,6 +132,10 @@
 
 
 
+
+
+
+
 .nav {
   border-bottom: 1px solid #F69331;
 }
@@ -165,16 +169,16 @@
   cursor: default;
   
   background: #ddd; /* Old browsers */
-  background: -moz-linear-gradient(top,   #f69331 0%, #ddd 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(00%,#f69331), color-stop(100%,#ddd)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #f69331 0%,#ddd 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #f69331 0%,#ddd 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #f69331 50%,#ddd 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #f69331 50%,#ddd 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,   #f69331 0%, white 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(00%,#f69331), color-stop(100%, white)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f69331 0%, white 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f69331 0%, white 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f69331 50%, white 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f69331 50%,white 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f69331', endColorstr='white',GradientType=0 ); /* IE6-9 */
 
   border-top:  3 groove #F69331; 
-  border-bottom-color: #ddd;
+  border-bottom-color: white;
   -webkit-border-top-left-radius: 10px;
   -webkit-border-top-right-radius: 10px;
   -moz-border-radius-topleft: 10px;
@@ -204,7 +208,7 @@
 
 
 .tab-pane {
-    background-color: #ddd;
+    background-color: white;
     margin-left: 5px;  
     margin-right: 5px;
     margin-bottom: 5px;
@@ -247,6 +251,7 @@
   transition-property: border-radius;
   transition-duration: 3s;
 
+
   .panel-title {
     font-family: Impact, Charcoal, sans-serif;
     color: #ddd;
@@ -279,6 +284,7 @@
   border-top: 2px solid #ddd;
   border-top: 2px solid #F69331;
   
+
   
   .panel-title {
     font-family: Impact, Charcoal, sans-serif;
@@ -290,6 +296,12 @@
   }
 }
 
+.icon-img {
+  border-radius: 15px;
+  border: 3px solid #222222;
+  background: #F69331;
+  display: none;
+}
 
 .js-tabcollapse-panel-body {
   background-color: #F69331;
