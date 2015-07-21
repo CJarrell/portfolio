@@ -126,12 +126,14 @@
   }                       
 
 }
+.gif-frame {
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);
+  border-radius: 5px;
 
-
-
-
-
-
+}
 
 .nav {
   border-bottom: 1px solid #F69331;
@@ -272,13 +274,13 @@
   margin-right: -27px;
   border-radius: 30px;
   background: #ddd; /* Old browsers */
-  background: -moz-linear-gradient(top,   #ddd 0%, #f69331 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ddd), color-stop( 100%, #f69331)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ddd  0%,#f69331 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ddd  0%,#f69331 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ddd 50%,#f69331 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #ddd 50%,#f69331 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,   #f69331 0%, white 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f69331), color-stop( 100%, white)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f69331  0%, white 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f69331 0%, white 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f69331 0%, white 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f69331 0%, white 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f69331', endColorstr='white',GradientType=0 ); /* IE6-9 */
   border-top: 2px solid #ddd;
   border-top: 2px solid #F69331;
   
@@ -294,20 +296,10 @@
   }
 }
 
-
-.icon-img {
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 15px;
-  border: 3px solid #222222;
-  background: #F69331;
-  display: none;
-}
-
 .js-tabcollapse-panel-body {
-  background-color: #F69331;
   border-radius: 0px 0px 15px 15px;
   border: 1px solid #F69331;
+  background: white;
 }
 
 
